@@ -1,0 +1,116 @@
+/* Switch
+   ========================================================================== */
+
+.switch,
+.switch * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+}
+
+.switch {
+    overflow: hidden;
+}
+
+.switch label {
+    cursor: pointer;
+    
+    .label {
+        vertical-align: middle;
+        margin-left: 5px;
+        
+        &:first-child {
+          margin-left: 0;
+          margin-right: 5px;
+        }
+    }
+}
+
+.switch label input[type=checkbox] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + .lever {
+        background-color: $switch-checked-lever-bg;
+
+        &:after {
+            background-color: $switch-bg-color;
+            left: 30px;
+        }
+        
+        &:before {
+          opacity: 1;
+      }
+    }
+}
+
+.switch label .lever {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 22px;
+    background-color: $switch-unchecked-lever-bg;
+    border-radius: $switch-radius;
+    margin-right: 10px;
+    vertical-align: middle;
+    margin: 0;
+    
+    @include transition(background $default-transition);
+
+    &:after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-color: $switch-unchecked-bg;
+        border-radius: $switch-radius;
+        left: 3px;
+        top: 3px;
+        
+        @include transition(all $default-transition);
+    }
+    
+    &:before {
+        content: "\f00c";
+        font-family: Entypo;
+        position: absolute;
+        color: #FFF;
+        top: 6px;
+        display: block;
+        right: 27px;
+        opacity: 0;
+        line-height: 10px;
+        
+        @include transition(opacity $default-transition);
+    }
+}
+/*
+// Switch active style
+input[type=checkbox]:checked:not(:disabled) ~ .lever:active::after,
+input[type=checkbox]:checked:not(:disabled).tabbed:focus ~ .lever::after {
+    //box-shadow: 0 1px 3px 1px rgba(0,0,0,.4), 0 0 0 15px transparentize($switch-bg-color, .9);
+}
+
+input[type=checkbox]:not(:disabled) ~ .lever:active:after,
+input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
+    //box-shadow: 0 1px 3px 1px rgba(0,0,0,.4), 0 0 0 15px rgba(0, 0, 0, .08);
+}
+*/
+// Disabled Styles
+.switch input[type=checkbox][disabled] + .lever {
+    cursor: default;
+}
+
+.switch label input[type=checkbox][disabled] + .lever:after,
+.switch label input[type=checkbox][disabled]:checked + .lever:after {
+    background-color: darken($input-disabled-solid-color, 8%);
+}
+
+.switch label input[type=checkbox][disabled] + .lever:before,
+.switch label input[type=checkbox][disabled]:checked + .lever:before {
+    color: darken($input-disabled-solid-color, 8%);
+}

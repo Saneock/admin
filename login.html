@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<!-- Content type and charset -->
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+		<!-- Mobile optimization -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+		<!-- Changing header color -->
+		<meta name="theme-color" content="#252D3A" />
+	
+    	<!-- Page title -->
+		<title>Админ панель</title>
+
+		<!-- Favicons -->
+        <link type="image/png" rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicons/apple-touch-icon-144-precomposed.png">
+        <link type="image/png" rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicons/apple-touch-icon-114-precomposed.png">
+        <link type="image/png" rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicons/apple-touch-icon-72-precomposed.png">
+        <link type="image/png" rel="apple-touch-icon-precomposed" sizes="57x57" href="img/favicons/apple-touch-icon-57-precomposed.png">
+        <link type="image/png" rel="shortcut icon" sizes="64x64" href="img/favicons/favicon64.png">
+        <link type="image/png" rel="shortcut icon" sizes="48x48" href="img/favicons/favicon48.png">
+        <link type="image/png" rel="shortcut icon" sizes="32x32" href="img/favicons/favicon32.png">
+        <link type="image/png" rel="shortcut icon" sizes="16x16" href="img/favicons/favicon16.png">
+    
+        <!-- Import Google Icon Font -->
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+        <!-- Import materialize.css -->
+        <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen" />
+		
+		<!-- Import Entypo Icons -->
+        <link type="text/css" rel="stylesheet" href="css/icons.css"  media="screen" />
+		
+        <!-- Import jQuery -->
+        <script src="js/jquery-2.1.1.min.js"></script>
+        
+        <!-- IE HTML5 Fix -->
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		
+		<!-- Import materialize.js -->
+		<script src="js-materialize/initial.js"></script>
+		<script src="js-materialize/global.js"></script>
+		<script src="js-materialize/jquery.easing.1.3.js"></script>
+		<script src="js-materialize/sideNav.js"></script>
+		<script src="js-materialize/collapsible.js"></script>
+		<script src="js-materialize/dropdown.js"></script>
+		<script src="js-materialize/forms.js"></script>
+		
+		<!-- Import JQuery UI CSS -->
+		<link type="text/css" rel="stylesheet" href="css/jquery-ui.css"  media="screen" />
+		<!-- Import JQuery UI JS -->
+		<script src="js/jquery-ui.min.js"></script>
+		<!-- Import Touch-Punch script -->
+		<script src="js/jquery.ui.touch-punch.min.js"></script>
+    </head>
+    
+	<body>
+		<!-- Default JS -->
+		<script>
+			var small_screen_size = 600;
+			var medium_screen_size = 992;
+			var large_screen_size = 1200;
+		</script>
+		<!-- END: Default JS -->
+		
+    	<div id="admin-content">
+            <!-- Main Container -->
+            <div class="cms-main-container full-width full-height">
+				<!-- Page Body -->
+				<section class="cms-page-body">
+					<!-- Login Form -->
+					<div id="login-form" class="card-panel doubled <!--with-bubble-->">
+						<form>
+							<div class="card-title">Вход в систему</div>
+							<!--<div class="card-bubble"><i class="icon icon-cogs"></i></div>-->
+						
+							<div class="row">
+								<div class="input-field col np s12">
+									<i class="icon icon-user2"></i>
+									<input id="login-field" type="text" name="login" required class="validate">
+									<label for="login-field">Логин</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col np s12">
+									<i class="icon icon-uniF023"></i>
+									<input id="password-field" type="password" name="password" required class="validate">
+									<label for="password-field">Пароль</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="switch">
+									<label for="checkbox-field" class="label">Оставаться в системе</label>
+									<label class="right">
+										<input id="checkbox-field" type="checkbox" name="remember">
+										<span class="lever"></span>
+									</label>
+								</div>
+							</div>
+							
+							<div class="buttons center-align">
+								<button type="submit" class="btn"><i class="icon icon-uniF046 right"></i>Вход</button>
+							</div>
+						</form>
+					</div>
+					
+					
+					<!-- Default JS -->
+					<script>
+						
+					</script>
+					<!-- END: Login Form-->
+				</section>
+				<!-- END: Page Body -->
+            </div>
+            <!-- END: Main Container -->
+        </div>
+        
+        <!-- Utils -->
+        <iframe name="save-data" id="save-data"></iframe>
+		<div id="json"></div>
+        <!-- END: Utils -->
+		
+		<!-- Footer -->
+			
+		<!-- END: Footer -->
+	</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<!-- Content type and charset -->
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+		<!-- Mobile optimization -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+		<!-- Changing header color -->
+		<meta name="theme-color" content="#252D3A" />
+	
+    	<!-- Page title -->
+		<title>Админ панель</title>
+
+		<!-- Favicons -->
+        <link type="image/png" rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicons/apple-touch-icon-144-precomposed.png">
+        <link type="image/png" rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicons/apple-touch-icon-114-precomposed.png">
+        <link type="image/png" rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicons/apple-touch-icon-72-precomposed.png">
+        <link type="image/png" rel="apple-touch-icon-precomposed" sizes="57x57" href="img/favicons/apple-touch-icon-57-precomposed.png">
+        <link type="image/png" rel="shortcut icon" sizes="64x64" href="img/favicons/favicon64.png">
+        <link type="image/png" rel="shortcut icon" sizes="48x48" href="img/favicons/favicon48.png">
+        <link type="image/png" rel="shortcut icon" sizes="32x32" href="img/favicons/favicon32.png">
+        <link type="image/png" rel="shortcut icon" sizes="16x16" href="img/favicons/favicon16.png">
+    
+        <!-- Import Google Icon Font -->
+        <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+        <!-- Import materialize.css -->
+        <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen" />
+		
+		<!-- Import Entypo Icons -->
+        <link type="text/css" rel="stylesheet" href="css/icons.css"  media="screen" />
+		
+        <!-- Import jQuery -->
+        <script src="js/jquery-2.1.1.min.js"></script>
+        
+        <!-- IE HTML5 Fix -->
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		
+		<!-- Import materialize.js -->
+		<script src="js-materialize/initial.js"></script>
+		<script src="js-materialize/jquery.easing.1.3.js"></script>
+		<script src="js-materialize/velocity.min.js"></script>
+		<script src="js-materialize/global.js"></script>
+		<script src="js-materialize/sideNav.js"></script>
+		<script src="js-materialize/collapsible.js"></script>
+		<script src="js-materialize/dropdown.js"></script>
+		<script src="js-materialize/forms.js"></script>
+		<script src="js-materialize/buttons.js"></script>
+		<script src="js-materialize/transitions.js"></script>
+		<script src="js-materialize/tooltip.js"></script>
+		<script src="js-materialize/toasts.js"></script>
+		
+		<!-- Import JQuery UI CSS -->
+		<link type="text/css" rel="stylesheet" href="css/jquery-ui.css"  media="screen" />
+		<!-- Import JQuery UI JS -->
+		<script src="js/jquery-ui.min.js"></script>
+		<!-- Import Touch-Punch script -->
+		<script src="js/jquery.ui.touch-punch.min.js"></script>
+		
+    </head>
+    
+	<body>
+		<!-- Default JS -->
+		<script>
+			var small_screen_size = 600;
+			var medium_screen_size = 992;
+			var large_screen_size = 1200;
+		</script>
+		<!-- END: Default JS -->
+		
+    	<div id="admin-content">
+            <!-- Sidebar -->
+            <aside id="cms-sidebar" class="cms-sidebar side-nav">
+				<a class="site-name" href="#" target="_blank">Sitename</a>
+				
+                <ul class="cms-menu">
+					<li><a href="#!"><i class="material-icons">reorder</i>Адм. меню</a></li>
+					<li class="selected">
+						<ul class="collapsible collapsible-accordion">
+							<li>
+								<a class="collapsible-header"><i class="material-icons">view_module</i><i class="material-icons mdi-navigation-arrow-drop-down right">arrow_drop_down</i>Категории</a>
+								<div class="collapsible-body">
+									<ul>
+										<li><a href="#!">First</a></li>
+										<li><a href="#!">Second</a></li>
+										<li><a href="#!">Third</a></li>
+										<li><a href="#!">Fourth</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#!"><i class="material-icons">dns</i>Продукция</a></li>
+				</ul>
+            </aside>
+			<!-- Sidebar JS -->
+			<script>
+				
+			</script>
+            <!-- END: Sidebar -->
+			
+			<!-- Header -->
+            <header class="cms-header navbar-fixed">
+				<nav>
+					<div class="nav-wrapper">
+						<ul class="left">
+							<li><a href="javascript:void(0)" data-activates="cms-sidebar" class="sidebar-button-collapse"><i class="icon icon-menu adjust"></i></a></li>
+							<li><a href="javascript:void(0)" class="notifications-button"><i class="icon icon-uniF0A2"></i></a></li>
+		
+							<li class="breadcrumbs">
+								<a href="javascript:void(0)" class="breadcrumb">Категории</a>
+								<a href="javascript:void(0)" class="breadcrumb">Список</a>
+							</li>
+						</ul>
+						<ul class="right">
+							<li><a href="javascript:void(0)"><i class="valign-wrapper"><img src="img/lang/ru.jpg" width="20" height="13" alt="Русский" /></i></a></li>	
+							<li><a href="javascript:void(0)"><i class="icon icon-user2 left"></i><span>Saneock</span></a></li>
+							<li><a href="javascript:void(0)" class="dropdown-button dropdown-settings" data-activates="dropdown-settings"><i class="icon icon-cog2 small-adjust"></i></a></li>
+						</ul>
+					</div>
+				</nav>
+				<ul id="dropdown-settings" class="dropdown-content">
+					<li><a href="#!">one</a></li>
+					<li><a href="#!">two</a></li>
+					<li><a href="#!">three</a></li>
+				</ul>
+            </header>
+			<!-- Header JS -->
+			<script>
+				$(".sidebar-button-collapse").sideNav({
+					hideOnDrag: false
+				});
+			</script>
+            <!-- END: Header -->
+            
+            <!-- Main Container -->
+            <div class="cms-main-container">
+                
+				<!-- Page Head -->
+				<section class="cms-page-head">
+					<div class="page-headers">
+						<h4>Категории</h4>
+						<aside>Найдено: 10</aside>
+					</div>
+					
+					<fieldset class="view-params right">
+						<div class="col">
+							<label>Сортировать по:</label>
+							<select name="params[order]" class="cms-action-select">
+								<option value="pos" selected>Позиции</option>
+								<option value="ID">ID</option>
+								<option value="title">Заголовку</option>
+								<option value="created">Дате добавления</option>
+								<option value="updated">Дате изменения</option>
+							</select>
+						</div>
+						<div class="col">
+							<label>Порядок:</label>
+							<select name="params[orderDirection]" class="cms-action-select">
+								<option value="DESC" selected>По убыванию</option>
+								<option value="ASC">По возрастанию</option>
+							</select>
+						</div>
+                        <div class="col separator"></div>
+                        <div class="col param-onPage">
+							<label>На странице:</label>
+							<select name="params[onPage]" class="cms-action-select">
+								<option value="10">10</option>
+								<option value="30" selected>30</option>
+							</select>
+						</div>
+					</fieldset>
+				</section>
+				<!-- Page Head JS -->
+				<script>
+					$(".cms-page-head select").material_select();
+				</script>
+				<!-- END: Page Head -->
+				
+				<!-- Page Body -->
+				<section class="cms-page-body">
+					<div class="panel">
+						<table class="cms-list highlight sortable">
+							<thead>
+								<tr>
+									
+									<th data-type="checkbox">
+										<input type="checkbox" class="filled-in" id="oc-checkbox-field-parent" />
+										<label for="oc-checkbox-field-parent"></label>
+									</th>
+									<th data-field="id">Name</th>
+									<th data-field="name">Item Name</th>
+									<th data-field="price">Item Price</th>
+									<th></th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td data-type="checkbox">
+										<input type="checkbox" class="filled-in" id="oc-checkbox-field-1" />
+										<label for="oc-checkbox-field-1"></label>
+									</td>
+									<td data-field="id"><a href="#">Alvin</a></td>
+									<td data-field="name">Ice Creem</td>
+									<td data-field="price">$0.87</td>
+									<td data-type="pos" data-position-value="10"></td>
+								</tr>
+								<tr class="state-block">
+									<td data-type="checkbox">
+										<input type="checkbox" class="filled-in" id="oc-checkbox-field-2" />
+										<label for="oc-checkbox-field-2"></label>
+									</td>
+									<td data-field="id"><a href="#">Alan</a></td>
+									<td data-field="name">Jellybean</td>
+									<td data-field="price">$3.76</td>
+									<td data-type="pos" data-position-value="20"></td>
+								</tr>
+								<tr>
+									<td data-type="checkbox">
+										<input type="checkbox" class="filled-in" id="oc-checkbox-field-3" />
+										<label for="oc-checkbox-field-3"></label>
+									</td>
+									<td data-field="id"><a href="#">Jonathan</a></td>
+									<td data-field="name">Lollipop</td>
+									<td data-field="price">$7.00</td>
+									<td data-type="pos" data-position-value="30"></td>
+								</tr>
+							</tbody>
+						</table>
+						
+						<a class="btn-floating fixed-action-btn btn-large red darken-1 list-add-button tooltipped" data-tooltip="Добавить" data-position="left"><i class="large material-icons">add</i></a>
+					
+						<div class="fixed-action-btn horizontal right list-actions-buttons hidden">
+							<a class="btn-floating btn-large indigo">
+								<i class="large material-icons">mode_edit</i>
+							</a>
+							<ul>
+								<li><a class="btn-floating green tooltipped" data-tooltip="Экспортировать" data-position="top"><i class="icon icon-uniF019"></i></a></li>
+								<li><a class="btn-floating orange darken-2 tooltipped" data-tooltip="Показывать" data-position="top"><i class="material-icons">visibility</i></a></li>
+								<li><a class="btn-floating yellow darken-2 tooltipped" data-tooltip="Скрывать" data-position="top"><i class="material-icons">visibility_off</i></a></li>
+								<li><a class="btn-floating red tooltipped" data-tooltip="Удалить" data-position="top"><i class="icon icon-uniF00D"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<div style="height:800px;"></div>
+				</section>
+				<!-- END: Page Body -->
+
+				<!-- List Page JS -->
+				<script>
+					// Change checkbox state by clicking on the parent <td>
+					$(".cms-list [data-type=checkbox]").bind("click", function(e){
+						if($(e.target).prop("tagName") == "TD" || $(e.target).prop("tagName") == "TH"){
+							$(this).find("input").prop("checked", !$(this).find("input").is(":checked")).change();
+						}
+					});
+					
+					// Parent checkbox
+					$(".cms-list thead [data-type=checkbox] input").bind("change", function(){
+						$(".cms-list tbody [data-type=checkbox] input").prop("checked", $(this).is(":checked"));
+					});
+					
+					// Show/Hide list actions
+					$(".cms-list [data-type=checkbox] input").bind("change", function(){
+						var actionsButton = $(".list-actions-buttons");
+						if($(".cms-list [data-type=checkbox] input:checked").length > 0 && actionsButton.hasClass("hidden"))
+							actionsButton.removeClass("hidden");
+						else if($(".cms-list [data-type=checkbox] input:checked").length == 0 && !actionsButton.hasClass("hidden"))
+							actionsButton.addClass("hidden");
+					});
+					
+					// Sortable list
+					$(function(){
+						var sortable = $(".cms-list.sortable tbody");
+						
+						sortable.sortable({
+							axis: "y",
+							handle: "[data-type=pos]",
+							helper: function(e, ui){
+								ui.children().each(function(){
+									$(this).width($(this).width()).height($(this).height());
+								});
+								return ui;
+							},
+							beforeStop: function(e, ui){
+								ui.helper.children().each(function(){
+									$(this).removeAttr("style");
+								});													
+								return ui;
+							},
+							start: function(e, ui){
+								sortable.find(".ui-sortable-placeholder").children().each(function(i, element){
+									$(this).width(ui.helper.find("td:eq("+i+")").width()).height(ui.helper.find("td:eq("+i+")").height()); 
+								});
+							},
+							stop: function(e, ui){
+								
+							},
+							update: function(e, ui){
+								var pos = ui.item.data('position');
+								sortable.calculatePositions();
+							}
+						});
+						
+						$.fn.calculateIndexes = function(){
+							sortable.find("tr").each(function(index, element){
+								$(element).attr('data-index', index).attr('data-position', $(element).find("[ data-type=pos]").data("position-value"));
+							});
+						}
+						
+						$.fn.calculatePositions = function(){
+							this.find("tr").each(function(index, element){
+								$(element).find("[ data-type=pos]").attr("data-position-value", sortable.find("tr[data-index="+$(element).index()+"]").data('position'));
+							});
+						}
+						
+						sortable.calculateIndexes();
+					});
+				</script>
+				
+            </div>
+            <!-- END: Main Container -->
+        </div>
+        
+        <!-- Utils -->
+        <iframe name="save-data" id="save-data"></iframe>
+		<div id="json"></div>
+        <!-- END: Utils -->
+		
+		<!-- Footer -->
+			
+		<!-- END: Footer -->
+		
+		<!-- Global End JS -->
+		<script>
+			$(".dropdown-button, .select-dropdown").dropdown({
+				inDuration: 200,
+				outDuration: 100,
+				belowOrigin: true // Displays dropdown below the button
+			});
+			$(function(){
+				$('.tooltipped').tooltip({ delay: 50 });
+			});
+		</script>
+	</body>
+</html>

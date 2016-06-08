@@ -1,0 +1,71 @@
+/* Select
+   ========================================================================== */
+.select-wrapper {
+	input.select-dropdown {
+		font-size: 1em;
+		padding: $select-padding;
+		height: auto;
+		line-height: 1;
+		@include border-box();
+		border: $select-border;
+	}
+	
+	span.caret {
+		top: 0.87rem;
+		font-size: 0.7em;
+		right: 1em;
+	}
+}
+
+/* Checkbox
+   ========================================================================== */
+[type="checkbox"] {
+	& + label {
+		height: $checkbox-height;
+		width: $checkbox-height;
+		line-height: $checkbox-height;
+		padding: 0;
+		display: block;
+	}
+	&.filled-in + label:after, &.filled-in + label:before {
+		border-radius: $checkbox-border-radius;
+	}
+	&.filled-in:not(:checked)+label:after, &.filled-in:checked+label:after {
+		height: $checkbox-height;
+		width: $checkbox-height;
+	}
+	&.filled-in:not(:checked)+label:after {
+		border: 1px solid #BBB;
+		background-color: #FFF;
+	}
+	& + label:before {
+		@include transition(0s);
+	}
+	&.filled-in:checked+label:before {
+		height: 0.9285em;
+		width: 0.5714em;
+		font-size: 0.93em;
+	}
+	&.filled-in+label:before, &.filled-in+label:after {
+		@include transition(0.05s);
+	}
+}
+
+
+/* Dropdown
+   ========================================================================== */
+.dropdown-content {
+	top: 100% !important;
+	min-width: auto;
+	@extend .z-depth-1-half;
+	li {
+		height: auto;
+		line-height: inherit;
+		padding: $select-padding;
+		
+		& > a, & > span {
+			line-height: inherit;
+			font-size: 1em;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+.cms-main-container {
+	padding: $navbar-height 0 0 $sidenav-width;
+	width: 100%;
+	
+	&.full-width {
+		padding-left: 0;
+	}
+	&.full-height {
+		padding-top: 0;
+	}
+	
+	@include transition(0.3s $default-easing);
+}
+
+@media #{$medium-and-down} {
+	.cms-main-container {
+		padding-left: 0;
+	}
+}
+
+@import "components/admin/main-section/page-head";
+@import "components/admin/main-section/page-body";
+
+@import "components/admin/main-section/blocks/login-form";

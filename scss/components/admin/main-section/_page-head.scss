@@ -1,0 +1,75 @@
+.cms-page-head {
+	background-color: color('shades', 'white');
+	@extend .z-depth-1-half;
+	padding: 1.5rem;
+	font-size: 13px;
+	min-height: 2.4em;
+
+	&:after {
+		@extend .clear;
+	}
+	
+	.page-headers {
+		float: left;
+		
+		h4 {
+			margin: -0.02em 0 0 0;
+			line-height: 1;
+			
+			+ aside {
+				margin: 0.86rem 0 0 0;
+				line-height: 1;
+			}
+		}
+		aside {
+			color: lighten(color("shades", "black"), 50%);
+		}
+	}
+	
+	fieldset {
+		margin: 0;
+		border: none;
+		padding: 0;
+		
+		.col {
+			@extend .left;
+			float: left;
+			
+			& + .col {
+				margin-left: 1.5em;
+			}
+			
+			&.separator {
+				margin-top: 0.1143em;
+				height: 4.1em;
+				padding-bottom: 0.1em;
+				border-right: $select-border;
+			}
+			
+			&.param-onPage {
+				width: 6.2em;
+			}
+		}
+
+		input.select-dropdown {
+			margin: 0;
+		}
+		
+		label {
+			font-size: 1em;
+			margin-bottom: 0.5em;
+			display: block;
+			line-height: 1;
+		}
+		
+		select {
+			height: auto;
+			cursor: pointer;
+			margin: 0;
+			
+			&:after {
+				content: "";
+			}
+		}
+	}
+}

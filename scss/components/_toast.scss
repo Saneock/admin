@@ -1,0 +1,76 @@
+#toast-container {
+  display:block;
+  position: fixed;
+  z-index: 10000;
+
+  @media #{$small-and-down} {
+    width: 100%;
+    bottom: 0;
+  }
+  @media #{$medium-only} {
+    top: $navbar-height + 0.5rem;
+    right: 1.5rem;
+    max-width: 50%;
+  }
+  @media #{$large-and-up} {
+    top: $navbar-height + 0.5rem;
+    right: 1.5rem;
+    max-width: 30%;
+  }
+}
+
+.toast {
+  @extend .z-depth-1-half;
+  border-radius: 2px;
+  top: 0;
+  width: auto;
+  clear: both;
+  position: relative;
+  max-width:100%;
+  height: auto;
+  min-height: $toast-height;
+  line-height: 1.5em;
+  word-break: break-all;
+  background-color: $toast-color;
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: $toast-text-color;
+  cursor: pointer;
+  margin-top: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .btn, .btn-flat {
+    margin: 0;
+    margin-left: 3rem;
+  }
+
+  &.rounded{
+    border-radius: 15px;
+  }
+  
+  &.error {
+      background: $input-error-color;
+  }
+  &.success {
+      background: $input-success-color;
+  }
+  &.warning {
+      background: $input-warning-color;
+  }
+
+  @media #{$small-and-down} {
+    width:100%;
+    border-radius: 0;
+  }
+  @media #{$medium-only} {
+    float: right;
+  }
+  @media #{$large-and-up} {
+    float: right;
+  }
+
+}

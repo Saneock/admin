@@ -1,0 +1,35 @@
+/* Login Form
+   ========================================================================== */
+#login-form {
+	$form-width: 300px;
+	
+	max-width: $form-width;
+	margin-top: 30%;
+	
+	@extend .center-block;
+}
+@include respond-to-height(0, 800px){
+	#login-form {
+		margin-top: 18vh;
+	}
+}
+@include respond-to-height(0, 700px){
+	#login-form {
+		margin-top: 15vh;
+	}
+}
+@include respond-to-height(0, 600px){
+	#login-form {
+		margin-top: 11vh;
+	}
+}
+@include respond-to-height(0, 500px){
+	#login-form {
+		margin-top: 3vh;
+	}
+}
+@include respond-to-height(0, 400px){
+	#login-form {
+		margin-top: 0;
+	}
+}

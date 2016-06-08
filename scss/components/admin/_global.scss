@@ -1,0 +1,33 @@
+body {
+	background-color: $body-background-color;
+
+	&.hidden-cursor * {
+		cursor: none !important;
+	}
+
+	// Hide save_data iframe
+	#save-data {
+		display: none;
+	}
+
+	// Clear block
+	.clear {
+		content: "";
+		clear: both;
+		display: table;
+		visibility: hidden;
+	}
+	
+	// Cards
+	.card {
+		@extend .z-depth-1-half;
+		margin: 0 0 1.5rem 0;
+	}
+	
+	// Panels
+	.panel {
+		@extend .z-depth-1-half;
+		margin: 0 0 1.5rem 0;
+		background-color: $card-bg-color;
+	}
+}

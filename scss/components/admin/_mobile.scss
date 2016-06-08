@@ -1,0 +1,34 @@
+@media #{$medium-and-down} {
+	body, body.visible-sidebar {
+		.cms-header {
+			left: 0;
+			padding-right: 0;
+		}
+		.cms-main-container {
+			padding-left: 0;
+		}
+		.list-actions-buttons {
+			left: $button-floating-edge-padding !important;
+		}
+		.cms-sidebar {
+			z-index: 9999999999;
+		}
+	}
+	
+	.cms-sidebar {
+		@include translateX(-100%);
+	}
+}
+@media #{$medium-and-up} {
+	body:not(.visible-sidebar):not(.hidden-sidebar):not(.hidden-sidebar-default){
+		.cms-sidebar {
+			@include translateX(0);
+		}
+		.cms-header, .cms-main-container, .cms-sidebar, .list-actions-buttons {
+			@include transition(none);
+		}
+	}
+	#sidenav-overlay {
+		display: none !important;
+	}
+}

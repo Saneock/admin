@@ -1,0 +1,14 @@
+i {
+	font-size: 1.5714rem;
+
+	&.icon {
+		font-size: 1.2857rem;
+		
+		&.adjust {
+			font-size: 1.5rem;
+		}
+		&.small-adjust {
+			font-size: 1.1428rem;
+		}
+	}
+}

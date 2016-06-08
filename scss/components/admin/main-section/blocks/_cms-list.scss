@@ -1,0 +1,241 @@
+/* List
+   ========================================================================== */
+.cms-list {
+	//font-size: 1.0714rem;
+	position: relative;
+
+	tr {
+		$link-hover-darken: 3%;
+		background-color: #FFF;
+		
+		@include transition(all $default-transition);
+		&.clone {
+			position: absolute;
+		}
+		&.state-block td:not([data-type="checkbox"]):not([data-type="pos"]):not([data-field="block"]) {
+			//background-color: $state-color-block;
+			opacity: 0.4;
+		
+			&:last-child{
+				padding-right: 3rem;
+				position: relative;
+				
+				&:after {
+					content: "visibility_off";
+					font-family: 'Material Icons';
+					font-size: 1.5rem;
+					float: right;
+					position: absolute;
+					line-height: 1;
+					right: 0;
+					width: 2rem;
+					text-align: center;
+				}
+			}
+		}
+		
+		td, th {
+			padding: 0 $table-cell-padding;
+			height: $cms-list-item-height;
+			
+			// Link
+			a {
+				font-weight: bold;
+				font-size: 1.1em;
+				line-height: $cms-list-item-height / 1.8;
+				display: inline-block;
+				@include border-box();
+				
+				&:after {
+					content: "";
+					display: block;
+					border-bottom: 1px solid $link-color;
+					width: 0;
+					height: 0;
+					margin-bottom: -1px;
+					@include transition(width $default-transition);
+				}
+				&:hover:after {
+					width: 100%;
+				}
+			}
+			
+			// Checkbox field
+			&[data-type="checkbox"] {
+				cursor: pointer;
+				width: 3.4285em;
+			}
+			
+			// Position field
+			&[data-type="pos"] {
+				cursor: n-resize;
+				width: 14px;
+				
+				&:after {
+					content: "";
+					width: 6px;
+					height: 14px;
+					margin: 0 auto;
+					display: block;
+					background: transparent url(../img/handle-grid.png) repeat-y;
+				}
+			}
+			
+			// Image field
+			&.image {
+				@extend td.size-min;
+				
+				img {
+					margin: 0.5em 0;
+					max-height: 5em;
+					max-width: 20em;
+					height: auto;
+					border: 1px solid $border-color;
+				}
+			}
+			
+			// Column sizes
+			&.size-min { // Minimum width
+				width: 1px;
+			}
+			&.size-max { // Maximum width
+				width: 100%;
+			}
+			&.size-small { // Small
+				width: 5rem;
+			}
+			&.size-normal { // Normal
+				width: 15rem;
+			}
+			&.size-large { // Large
+				width: 22rem;
+			}
+			&.size-very-large { // Very large
+				width: 30rem;
+			}
+			
+			// Column paddings
+			&.padding-double { 
+				padding-left: $table-cell-padding * 2;
+				padding-right: $table-cell-padding * 2;
+			}
+			&.padding-left {
+				padding-left: $table-cell-padding;
+				padding-right: 0;
+			}
+			&.padding-right {
+				padding-right: $table-cell-padding;
+				padding-left: 0;
+			}
+			&.padding-double-left { 
+				padding-left: $table-cell-padding * 2;
+			}
+			&.padding-double-right { 
+				padding-right: $table-cell-padding * 2;
+			}
+			&.padding-double-left-only { 
+				padding-left: $table-cell-padding * 2;
+				padding-right: 0;
+			}
+			&.padding-double-right-only { 
+				padding-right: $table-cell-padding * 2;
+				padding-left: 0;
+			}
+		}
+		
+		// UI Placeholder
+		&.ui-sortable-placeholder {
+			$padding: 5%;
+			$border: 1px dashed $border-color;
+			
+			visibility: visible !important;
+			
+			td {
+				position: relative;
+				
+				&:after{
+					content: "";
+					display: block;
+					width: 100%;
+					height: 100% - $padding * 2;
+					border: $border;
+					border-left: none;
+					border-right: none;
+					position: absolute;
+					top: $padding;
+					left: 0;
+				}
+				
+				&:first-child:after {
+					border-left: $border;
+					margin-left: $table-cell-padding;
+					width: calc(100% - #{$table-cell-padding});
+				}
+				&:last-child:after {
+					border-right: $border;
+					margin-right: $table-cell-padding;
+					width: calc(100% - #{$table-cell-padding});
+				}
+			}
+		}
+		
+		// UI Helper
+		&.ui-sortable-helper {
+			$border: 1px solid $border-color;
+			
+			@include scale(0.9);
+			
+			td {
+				border: $border;
+				border-left: none;
+				border-right: none;
+				
+				&:first-child {
+					border-left: $border;
+				}
+				&:last-child {
+					border-right: $border;
+				}
+			}
+		}
+	}
+
+	&.bordered {
+		& > thead, & > tbody {
+			& > tr:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+
+
+		
+	&.sortable .state-block td:nth-last-child(2):not([data-field="block"]){
+		padding-right: 3rem;
+		position: relative;
+		
+		&:after {
+			content: "visibility_off";
+			font-family: 'Material Icons';
+			font-size: 1.5rem;
+			float: right;
+			position: absolute;
+			line-height: 1;
+			right: 0;
+			width: 2rem;
+			text-align: center;
+		}
+	}
+}
+
+// Actions buttons
+.list-actions-buttons {
+	left: $sidenav-width + $button-floating-edge-padding;
+	right: auto;
+
+	@include transition(0.3s $default-easing);
+
+	&.hidden {
+		@include translateY($button-floating-edge-padding + $button-large-height + 1);
+	}
+}
